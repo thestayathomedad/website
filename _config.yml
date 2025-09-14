@@ -2,11 +2,7 @@ title: thestayathomedad
 baseurl: ""
 url: ""
 
-collections_dir: content
-collections:
-  posts:
-    output: true
-    permalink: /blog/:slug/
+permalink: /blog/:title/
 
 defaults:
   - scope:

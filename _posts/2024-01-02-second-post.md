@@ -1,9 +1,8 @@
 ---
 title: "Second Post"
-slug: "second-post"
+date: 2024-01-02
+categories: [general]
 summary: "Another sample post without media."
-featured: false
-weight: 4
-published: true
+image: /assets/uploads/logo.png
 ---
 This is the second example post to populate the blog listing.
