@@ -21,6 +21,7 @@ title: Home
         {% if post.summary %}
           <p>{{ post.summary }}</p>
         {% endif %}
+        <p><a href="{{ post.url | relative_url }}">Read more &rarr;</a></p>
       </article>
     {% endfor %}
   </div>

@@ -8,11 +8,12 @@ layout: default
   {% endif %}
   {% if page.video %}
     <div class="video">
-      <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+      {% assign video_url = page.video %}
+      {% if video_url contains 'watch?v=' %}
+        {% assign video_url = video_url | replace: 'watch?v=', 'embed/' %}
+      {% endif %}
+      <iframe src="{{ video_url }}" frameborder="0" allowfullscreen></iframe>
     </div>
-  {% endif %}
-  {% if page.summary %}
-    <p>{{ page.summary }}</p>
   {% endif %}
   {{ content }}
 </article>
