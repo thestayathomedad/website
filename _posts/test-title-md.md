@@ -4,7 +4,7 @@ slug: test slug
 cover: logo.png
 summary: test summary
 featured: false
-order: 0
+order: 1
 published: true
 ---
 tet body
