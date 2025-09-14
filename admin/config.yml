@@ -7,11 +7,11 @@ public_folder: "/assets/uploads"
 collections:
   - name: "posts"
     label: "Blog Posts"
-    folder: "content/posts"
+    folder: "content/_posts"
     identifier_field: "slug"
     create: true
     slug: "{{slug}}"
-    path: "{{slug}}.md"
+    path: "{{year}}-{{month}}-{{day}}-{{slug}}.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string", hint: "URL part, no spaces" }
