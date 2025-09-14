@@ -4,26 +4,29 @@ title: Home
 ---
 
 <section>
-  <h1>Welcome to thestayathomedad</h1>
-  <p>This site uses Jekyll.</p>
+  <h1 class="text-3xl font-bold mb-4">Welcome to thestayathomedad</h1>
+  <p class="mb-8">This site uses Jekyll.</p>
 </section>
 
 <section>
-  <h2>Latest Posts</h2>
-  <div class="grid">
+  <h2 class="text-2xl font-semibold mb-4">Latest Posts</h2>
+  <div class="grid gap-6 md:grid-cols-2">
     {% assign posts = site.posts | sort: 'date' | reverse %}
-    {% for post in posts limit:6 %}
-      <article>
+    {% for post in posts limit:2 %}
+      <article class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
         {% if post.image %}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="mb-4 rounded">
         {% endif %}
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+        <h3 class="text-xl font-bold mb-2"><a href="{{ post.url | relative_url }}" class="text-blue-600 hover:underline">{{ post.title }}</a></h3>
+        <p class="text-sm text-gray-500 mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
         {% if post.summary %}
-          <p>{{ post.summary }}</p>
+          <p class="mb-4">{{ post.summary }}</p>
         {% endif %}
-        <p><a href="{{ post.url | relative_url }}">Read more &rarr;</a></p>
+        <a href="{{ post.url | relative_url }}" class="text-blue-600 hover:underline">Read more &rarr;</a>
       </article>
     {% endfor %}
+  </div>
+  <div class="mt-8">
+    <a href="{{ '/posts/' | relative_url }}" class="text-blue-500 hover:underline">View all posts &rarr;</a>
   </div>
 </section>
