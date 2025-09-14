@@ -6,11 +6,11 @@ collections_dir: content
 collections:
   blog:
     output: true
-    permalink: /blog/:path/
+    permalink: /blog/:name/
 
 defaults:
   - scope:
       path: ""
       type: blog
     values:
-      layout: post
+      layout: blog
