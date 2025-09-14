@@ -1,13 +1,4 @@
-/* Custom dark theme overrides */
-body {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-a {
-  color: teal;
-}
-
+/* Custom overrides */
 article img {
   width: 100%;
   height: auto;

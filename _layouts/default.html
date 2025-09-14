@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
-  <body>
-    <main class="container">
+  <body class="bg-gray-900 text-gray-100">
+    <main class="container mx-auto px-4 py-8">
       {{ content }}
     </main>
   </body>
