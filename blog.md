@@ -5,8 +5,17 @@ permalink: /blog/
 ---
 
 <h1>Blog</h1>
-<ul>
-  {% for post in site.posts %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+<div class="grid">
+  {% assign posts = site.blog | where: "published", true | sort: "date" | reverse %}
+  {% for post in posts %}
+    <article>
+      {% if post.cover %}
+        <img src="{{ post.cover | relative_url }}" alt="{{ post.title }} cover">
+      {% endif %}
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {% if post.summary %}
+        <p>{{ post.summary }}</p>
+      {% endif %}
+    </article>
   {% endfor %}
-</ul>
+</div>

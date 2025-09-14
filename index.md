@@ -3,5 +3,25 @@ layout: default
 title: Home
 ---
 
-<h1>Welcome to thestayathomedad</h1>
-<p>This site uses Jekyll and Decap CMS.</p>
+<section>
+  <h1>Welcome to thestayathomedad</h1>
+  <p>This site uses Jekyll and Decap CMS.</p>
+</section>
+
+<section>
+  <h2>Latest Posts</h2>
+  <div class="grid">
+    {% assign posts = site.blog | where: "published", true | sort: "date" | reverse %}
+    {% for post in posts limit:6 %}
+      <article>
+        {% if post.cover %}
+          <img src="{{ post.cover | relative_url }}" alt="{{ post.title }} cover">
+        {% endif %}
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.summary %}
+          <p>{{ post.summary }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>

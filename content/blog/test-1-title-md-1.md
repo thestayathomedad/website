@@ -1,10 +1,10 @@
 ---
-title: test 1 - title
-slug: this is th slug box test
-cover: logo.png
+title: Test 1 Title
+slug: test-1-title
+cover: /assets/uploads/logo.png
 summary: this is the test for the summary box
 featured: true
-order: 1
+weight: 1
 published: true
 ---
 
