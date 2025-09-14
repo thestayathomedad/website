@@ -11,7 +11,7 @@ title: Home
 <section>
   <h2>Latest Posts</h2>
   <div class="grid">
-    {% assign posts = site.blog | where: "published", true | sort: "date" | reverse %}
+    {% assign posts = site.posts | where: "published", true | sort: "date" | reverse %}
     {% for post in posts limit:6 %}
       <article>
         {% if post.cover %}

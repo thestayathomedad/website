@@ -6,7 +6,7 @@ permalink: /blog/
 
 <h1>Blog</h1>
 <div class="grid">
-  {% assign posts = site.blog | where: "published", true | sort: "date" | reverse %}
+  {% assign posts = site.posts | where: "published", true | sort: "date" | reverse %}
   {% for post in posts %}
     <article>
       {% if post.cover %}

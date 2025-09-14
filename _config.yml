@@ -4,13 +4,13 @@ url: ""
 
 collections_dir: content
 collections:
-  blog:
+  posts:
     output: true
-    permalink: /blog/:name/
+    permalink: /blog/:slug/
 
 defaults:
   - scope:
       path: ""
-      type: blog
+      type: posts
     values:
-      layout: blog
+      layout: post
