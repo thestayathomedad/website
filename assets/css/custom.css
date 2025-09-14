@@ -12,8 +12,3 @@ article img {
   width: 100%;
   height: auto;
 }
-
-.video iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}

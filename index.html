@@ -5,19 +5,20 @@ title: Home
 
 <section>
   <h1>Welcome to thestayathomedad</h1>
-  <p>This site uses Jekyll and Decap CMS.</p>
+  <p>This site uses Jekyll.</p>
 </section>
 
 <section>
   <h2>Latest Posts</h2>
   <div class="grid">
-    {% assign posts = site.posts | where: "published", true | sort: "date" | reverse %}
+    {% assign posts = site.posts | sort: 'date' | reverse %}
     {% for post in posts limit:6 %}
       <article>
-        {% if post.cover %}
-          <img src="{{ post.cover | relative_url }}" alt="{{ post.title }} cover">
+        {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
         {% endif %}
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
         {% if post.summary %}
           <p>{{ post.summary }}</p>
         {% endif %}
@@ -26,4 +27,3 @@ title: Home
     {% endfor %}
   </div>
 </section>
-
