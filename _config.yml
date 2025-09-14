@@ -2,14 +2,15 @@ title: thestayathomedad
 baseurl: ""
 url: ""
 
+collections_dir: content
 collections:
-  posts:
+  blog:
     output: true
     permalink: /blog/:path/
 
 defaults:
   - scope:
       path: ""
-      type: posts
+      type: blog
     values:
       layout: post
