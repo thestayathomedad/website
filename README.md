@@ -49,3 +49,4 @@ A modern, dark-themed blog for affiliate content. No dates. Managed in a web CMS
 ```bash
 bundle install
 bundle exec jekyll serve
+```

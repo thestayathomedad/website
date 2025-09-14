@@ -1,0 +1,15 @@
+title: thestayathomedad
+baseurl: ""
+url: ""
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
