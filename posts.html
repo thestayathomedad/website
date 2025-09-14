@@ -13,13 +13,12 @@ permalink: /posts/
         <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="mb-4 rounded">
       {% endif %}
       <h3 class="text-xl font-bold mb-2">
-        <a href="{{ post.url | relative_url }}" class="text-blue-600 hover:underline">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}" class="text-indigo-400 hover:underline">{{ post.title }}</a>
       </h3>
-      <p class="text-sm text-gray-500 mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
       {% if post.summary %}
         <p class="mb-4">{{ post.summary }}</p>
       {% endif %}
-      <a href="{{ post.url | relative_url }}" class="text-blue-600 hover:underline">Read more &rarr;</a>
+      <a href="{{ post.url | relative_url }}" class="text-indigo-400 hover:underline">Read more &rarr;</a>
     </article>
   {% endfor %}
 </div>

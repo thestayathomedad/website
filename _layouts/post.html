@@ -2,10 +2,9 @@
 layout: default
 ---
 <article>
-  <h1>{{ page.title }}</h1>
-  <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
+  <h1 class="text-3xl font-bold mb-4">{{ page.title }}</h1>
   {% if page.image %}
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="mb-4 rounded">
   {% endif %}
   {{ content }}
 </article>
